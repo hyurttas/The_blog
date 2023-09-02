@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&family=Quicksand&display=swap');
+
+$main-color: #ec633d;
+$secondary: rgb(110, 38, 12);
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    outline: 0;
+    box-sizing: border-box;
+    color: #ac4022;
+    scroll-behavior: smooth;
+    transition: all .3s ease;
+}
+body{
+    background-color: #fffdfd;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #d3cccc;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 40px;
+    .logo{
+        font-size: xx-large;
+        color: $main-color;
+    }
+    .nav-texts{
+        .NavLink{
+            font-size: 20px;
+            font-weight: 500;
+            color: $secondary;
+            margin-right: 20px;
+            &:hover{
+                color: #ac4022;
+            }
+        }
+    }
+}
+.link{
+    color: red;
+}
+.content{
+    max-width: 60%;
+    padding: 20px;
+    margin: 40px auto;
+}
+.home{
+    .blog_list{
+        h1{
+            padding-bottom: 20px;
+            transform: translateX(15px);
+            color: $secondary;
+        }
+    }
+    .blog_preview{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            background: transparent;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px dashed $main-color;
+            i{
+                color: $main-color;
+                font-size: 1.1rem;
+            }
+            &:hover{
+                border: 2px solid red;
+                i{
+                    color: red;
+                }
+            }
+        }
+        padding: 20px 16px;
+        transition: border 0s !important;
+        border-bottom: 1px solid #333;
+        transition-delay: .2s;
+        transition-property: box-shadow;
+        &:hover{
+            box-shadow: 1px 2px 3px rgba(0,0,0, .4);
+            border-bottom: 1px solid transparent;
+            p{
+                color: $secondary;
+            }
+        }
+        h2{
+            color: $main-color;
+            font-size: 25px !important;
+            margin-bottom: 8px!important;
+        }
+        p{
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+    }
+}
+.blog-details{
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    h2{
+        font-size: 3rem;
+        padding-bottom: 9px;
+        letter-spacing: .7px;
+    }
+    p{
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $main-color;
+        padding-bottom: 25px;
+    }
+    .blog-body{
+        font-size: 1.15rem;
+        line-height: 25px;
+        padding-bottom: 20px;
+        &::first-letter{
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+    }
+    button{
+        font-size: 1.1rem;
+        background-color: tomato;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        padding: 6px 10px;
+        border-radius: 4px;
+        &:hover{
+            background-color: rgb(233, 139, 122);
+        }
+    }
+}
+.create{
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 60px;
+    h2{
+        padding: 20px 0;
+    }
+    label,input{
+        display: block;
+    }
+    label{
+        padding-top: 10px;
+        font-size: 1.3rem;
+        padding-bottom: 5px;
+    }
+    
+    textarea{
+        height: 100px;
+    }
+    textarea,input{
+        width: 100%;
+        border: 1px solid $secondary;
+        border-radius: 5px;
+        padding: 4px 9px;
+        background: transparent;
+        font-size: 1.2rem;
+        transition: border, outline 0!important;
+        &:focus{
+            border: 1px dashed black;
+        }
+    }
+    button{
+        margin-top: 20px;
+        background: $secondary;
+        color: #fdf1f1;
+        border: 1px solid $secondary;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        font-size: 1.2rem;
+        &:hover{
+            background-color: #ac4022;
+        }
+    }
+}
+.notfound{
+    width: 700px;
+    padding-top: 50px;
+    margin: 0 auto;
+    h2{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+    p{
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    .Link{
+        font-size: 20px;
+        color: red;
+        text-decoration: underline;
+    }
+}
